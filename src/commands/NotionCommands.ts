@@ -85,6 +85,7 @@ export default class RibbonCommands {
 		let commandName = `Share to ${dbDetails.fullName} (${dbDetails.abName})`; // or use a translated name
 
 		let editorCallback: (editor: Editor, view: MarkdownView) => Promise<void>;
+
 		if (dbDetails.format === 'next') {
 			editorCallback = async (editor, view) => {
 				await uploadCommandNext(this.plugin, this.plugin.settings, dbDetails, this.plugin.app);
